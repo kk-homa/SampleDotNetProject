@@ -10,12 +10,11 @@ on:
     branches:
       - develop
       - main
-      
+
 permissions:
   pull-requests: write
   contents: read
 
-  workflow_dispatch:
 
 jobs:
   resharper-analysis:
