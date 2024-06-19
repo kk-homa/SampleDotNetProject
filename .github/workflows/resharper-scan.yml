@@ -52,5 +52,5 @@ jobs:
       - name: Inspect code
         uses: muno92/resharper_inspectcode@1.6.7
         with:
-          solutionPath: ./MangoAPI.sln
+          solutionPath: ./SampleDotNet.sln
         continue-on-error: true
