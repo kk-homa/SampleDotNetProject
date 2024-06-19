@@ -11,11 +11,6 @@ on:
       - develop
       - main
 
-permissions:
-  pull-requests: write
-  contents: read
-
-
 jobs:
   resharper-analysis:
     name: Resharper Analysis
