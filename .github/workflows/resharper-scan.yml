@@ -57,6 +57,4 @@ jobs:
         uses: muno92/resharper_inspectcode@1.6.7
         with:
           solutionPath: ./SampleDotNet.sln
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          post_comment: true
         continue-on-error: true
