@@ -52,4 +52,5 @@ jobs:
         uses: muno92/resharper_inspectcode@1.6.7
         with:
           solutionPath: ./SampleDotNet.sln
+          minimumSeverity: notice
         continue-on-error: true
