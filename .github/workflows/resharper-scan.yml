@@ -41,13 +41,6 @@ jobs:
           path: ${{ env.NUGET_PACKAGES }}
           key: ${{ runner.os }}.nuget.${{ hashFiles('**/*.csproj') }}
 
-      - name: Restore Nuget Packages
-        run: dotnet restore
-
-      - name: Build .NET Project
-        run: |
-          dotnet build --no-restore /p:ContinuousIntegrationBuild=true --configuration Release
-
       - name: Inspect code
         uses: muno92/resharper_inspectcode@1.6.7
         with:
