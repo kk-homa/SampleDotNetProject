@@ -11,6 +11,7 @@ on:
       - develop
       - main
 
+
 jobs:
   resharper-analysis:
     name: Resharper Analysis
@@ -34,22 +35,9 @@ jobs:
         with:
           dotnet-version: 7.0.x
 
-      - name: NuGet Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.NUGET_PACKAGES }}
-          key: ${{ runner.os }}.nuget.${{ hashFiles('**/*.csproj') }}
-
-      - name: Restore Nuget Packages
-        run: dotnet restore
-
-      - name: Build .NET Project
-        run: |
-          dotnet build --no-restore /p:ContinuousIntegrationBuild=true --configuration Release
-
       - name: Inspect code
-        uses: muno92/resharper_inspectcode@1.6.7
+        uses: kk-homa/resharper_inspectcode@fix/multi-project-setup
         with:
-          solutionPath: ./SampleDotNet.sln
+          solutionPath: ./SampleDotNetProject/SampleDotNet.sln
           minimumSeverity: notice
         continue-on-error: true
