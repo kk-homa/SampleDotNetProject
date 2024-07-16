@@ -42,7 +42,7 @@ jobs:
           key: ${{ runner.os }}.nuget.${{ hashFiles('**/*.csproj') }}
 
       - name: Inspect code
-        uses: muno92/resharper_inspectcode@1.6.7
+        uses: kk-homa/resharper_inspectcode@main
         with:
           solutionPath: ./SampleDotNet.sln
           minimumSeverity: notice
