@@ -44,6 +44,7 @@ jobs:
       - name: Inspect code
         uses: kk-homa/resharper_inspectcode@fix/dotnet-for-multiple-projects
         with:
-          solutionPath: ./SampleDotNet.sln
+          solutionPath: ./SampleDotNetProject/SampleDotNet.sln
           minimumSeverity: notice
+          workingDirectory: ../.
         continue-on-error: true
