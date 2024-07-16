@@ -36,7 +36,7 @@ jobs:
           dotnet-version: 7.0.x
 
       - name: Inspect code
-        uses: kk-homa/resharper_inspectcode@test/uncache-action-step
+        uses: kk-homa/resharper_inspectcode@test/squashed-working
         with:
           solutionPath: ./SampleDotNetProject/SampleDotNet.sln
           minimumSeverity: notice
