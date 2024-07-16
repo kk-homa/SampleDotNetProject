@@ -38,7 +38,6 @@ jobs:
       - name: Inspect code
         uses: kk-homa/resharper_inspectcode@test/uncache-action-step
         with:
-          solutionPath: ./SampleDotNetProject/SampleDotNet.sln
+          solutionPath: ./SampleDotNet.sln
           minimumSeverity: notice
-          workingDirectory: ../.
         continue-on-error: true
